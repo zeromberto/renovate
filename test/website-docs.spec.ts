@@ -1,6 +1,7 @@
 import fs from 'fs';
 import { getOptions } from '../lib/config/definitions';
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
   namespace jest {
@@ -14,6 +15,7 @@ declare global {
     }
   }
 }
+/* eslint-enable @typescript-eslint/no-unused-vars */
 
 const options = getOptions();
 
