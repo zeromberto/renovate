@@ -93,6 +93,7 @@ async function getDatasource(goModule: string): Promise<DataSource | null> {
     }
 
     logger.trace({ goModule }, 'No go-source or go-import header found');
+    logger.trace({ res }, 'html');
   }
   return null;
 }
