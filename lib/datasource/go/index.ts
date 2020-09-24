@@ -66,9 +66,9 @@ async function getDatasource(goModule: string): Promise<DataSource | null> {
       };
     }
   } else {
-    // GitHub Enterprise only returns a go-import meta
+    // GitHub Enterprise / Azure DevOps only returns a go-import meta
     const importMatch = regEx(
-      `<meta\\s+name="go-import"\\s+content="([^\\s]+)\\s+([^\\s]+)\\s+([^\\s]+)">`
+      `<meta\\s+name="go-import"\\s+content="([^\\s]+)\\s+([^\\s]+)\\s+([^\\s]+)"\\s*\\/{0,1}>`
     ).exec(res);
     if (importMatch) {
       const [, prefix, , goImportURL] = importMatch;
